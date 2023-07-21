@@ -52,23 +52,39 @@ function generatePassword(){
     possibleCharacters += specialCharacters;
   }
 
-  if (possibleCharacters.length == 0) {
-    return "No Password Generated... rememver to answer yes to one of the four types of characters"
-  }
-  else {
-    for (var i = 0; i<passwordLength; i++) {
-      var randomValue;
-      if (yesOrNo == "yes") {
-        randomValue = Math.floor(Math.random() * 69); 
-      }
-      else {
-        randomValue = Math.floor(Math.random() * 36); 
-      }
-      var newCharacter = possibleCharacters.slice(randomValue - 1, randomValue)
-      newPassword += newCharacter;
+  if (possibleCharacters.length === 0) {
+    var oneThroughFour = prompt("You did not choose at lease one of the four criteria. Choose a number one through four to include one criteria for your password. 1: lower case letters, 2: upper case lettes, 3: numbers, 4: special characters.");
+    while (oneThroughFour != 1 && oneThroughFour != 2 && oneThroughFour != 3 && oneThroughFour != 4)
+    {
+      oneThroughFour = prompt("Please choose a number one through four to continue.");
+    }
+    if (oneThroughFour == 1 ) {
+      possibleCharacters += lowerCaseLetters;
+    }
+    if (oneThroughFour == 2 ) {
+      possibleCharacters += upperCaseLetters;
+    }
+    if (oneThroughFour == 3 ) {
+      possibleCharacters += numbers;
+    }
+    if (oneThroughFour == 4 ) {
+      possibleCharacters += specialCharacters;
     }
   }
 
+  for (var i = 0; i<passwordLength; i++) {
+    var randomValue;
+    var sliceRange = possibleCharacters.length;
+    //if (yesOrNo == "yes") {
+      //randomValue = Math.floor(Math.random() * possibleCharacters.length); 
+    //}
+    //else {
+      //randomValue = Math.floor(Math.random() * possibleCharacters.length); 
+    //}
+    randomValue = Math.floor(Math.random() * sliceRange); 
+    var newCharacter = possibleCharacters.slice(randomValue - 1, randomValue);
+    newPassword += newCharacter;
+  }
   return newPassword;
 }
 
