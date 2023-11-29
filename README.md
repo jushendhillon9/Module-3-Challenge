@@ -1,4 +1,4 @@
 <img width="1103" alt="Module 3 Screenshot" src="https://github.com/jushendhillon9/Module-3-Challenge/assets/137123520/2951a1bf-c20a-4e47-a842-23a9203af8c9">
 Description: In this module challenge, I refactored a given starter code for a Password Generator webpage. The instructions were to write the logic of the function that would generate the random password to onshow onscreen. The function needed to ask the user to select from four criteria (whether or not to include uppercase characters, lowercase characters, numbers, and/or special characters) and this would determine the possible characters for their password. The function also included error checks placed on the user's responses to questions about the possible characters.
 
-Link to deployed application: https://jushendhillon9.github.io/Module-3-Challenge/
+Link to deployed application: [https://jushendhillon9.github.io/Module-3-Challenge/](https://jushendhillon9.github.io/Password-Generator-Module-3-Challenge/)https://jushendhillon9.github.io/Password-Generator-Module-3-Challenge/
